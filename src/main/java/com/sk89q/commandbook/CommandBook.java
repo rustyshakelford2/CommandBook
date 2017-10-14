@@ -178,8 +178,6 @@ public final class CommandBook extends BasePlugin {
             String commandLabel, String[] args) {
         try {
             commands.execute(cmd.getName(), args, sender, sender);
-        } catch (CommandPermissionsException e) {
-            sender.sendMessage(ChatColor.RED + "");
         } catch (MissingNestedCommandException e) {
             sender.sendMessage(ChatColor.RED + e.getUsage());
         } catch (CommandUsageException e) {
